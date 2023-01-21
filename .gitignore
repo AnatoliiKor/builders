@@ -1,0 +1,22 @@
+
+output/
+
+# Maven
+**/target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+
+# Gradle
+.gradle
+**/build/
+!src/**/build/
+
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+*.ipr
+
