@@ -5,6 +5,9 @@
 # Clone project
 git clone https://github.com/AnatoliiKor/builders.git
 
+# Change the folder
+cd builders
+
 # build project
 mvn clean package
 
