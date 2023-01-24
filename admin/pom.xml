@@ -34,7 +34,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>${project.basedir}/../output</directory>
+                            <directory>${project.basedir}/../outputMaven</directory>
                             <includes>
                                 <include>**/*</include>
                             </includes>
@@ -66,7 +66,7 @@
                             <mainClass>com.builders.admin.AdminEntryPoint</mainClass>
                         </manifest>
                     </archive>
-                    <outputDirectory>${project.basedir}/../output</outputDirectory>
+                    <outputDirectory>${project.basedir}/../outputMaven</outputDirectory>
                 </configuration>
                 <executions>
                     <execution>

@@ -1,7 +1,5 @@
 #artifacts
-output/
-deploy/
-outputGradle/
+output*/
 
 # Maven
 **/target/

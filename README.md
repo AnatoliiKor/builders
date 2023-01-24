@@ -39,6 +39,6 @@ gradle test
 ```
 
 ### Run war-module
-1. copy war-file from 'web/target/web-1.0.0.war' to a {tomcat_install_dir}/webapps/
+1. copy war-file from 'output*/web-1.0.0.war' to a {tomcat_install_dir}/webapps/
 2. run tomcat-server ({tomcat_install_dir}/bin/startup.bat)
 3. open in your browser http://localhost:8080/web-1.0.0/
