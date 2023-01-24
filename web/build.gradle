@@ -1,7 +1,15 @@
 plugins {
     id 'myproject.java-conventions'
+    id 'war'
 }
 
 dependencies {
     implementation project(':services')
+    implementation project(':utils')
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+}
+
+war {
+    archiveBaseName = 'builders-web'
+    destinationDirectory.set(file("$rootDir/outputGradle"))
 }

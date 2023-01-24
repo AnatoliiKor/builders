@@ -1,6 +1,7 @@
 #artifacts
 output/
 deploy/
+outputGradle/
 
 # Maven
 **/target/
@@ -14,6 +15,13 @@ deploy/
 **/build/
 !src/**/build/
 
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+gradlew
+gradlew.bat
 
 ### IntelliJ IDEA ###
 .idea/
