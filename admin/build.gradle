@@ -1,0 +1,45 @@
+plugins {
+    id 'myproject.java-conventions'
+    id 'application'
+}
+
+application {
+    mainClass = 'com.builders.admin.AdminEntryPoint'
+}
+
+dependencies {
+    implementation project(':services')
+    implementation project(':utils')
+}
+
+project.delete(
+        files("${rootDir}/outputGradle")
+)
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.builders.admin.AdminEntryPoint'
+        )
+    }
+}
+
+task uberJar(type: Jar) {
+    archiveClassifier = 'uber'
+
+    from sourceSets.main.output
+
+    dependsOn configurations.runtimeClasspath
+
+    manifest {
+        attributes(
+                'Main-Class': 'com.builders.admin.AdminEntryPoint'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
+    destinationDirectory.set(file("$rootDir/outputGradle"))
+}
+
+build.finalizedBy(uberJar)
