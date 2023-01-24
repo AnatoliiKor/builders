@@ -12,10 +12,6 @@ dependencies {
     implementation project(':utils')
 }
 
-project.delete(
-        files("${rootDir}/outputGradle")
-)
-
 jar {
     manifest {
         attributes(

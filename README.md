@@ -32,7 +32,7 @@ cd builders
 gradle clean build
 
 # run Admin service
-java -jar outputGradle/admin-1.0-uber.jar
+java -jar outputGradle/admin-1.0.0-uber.jar
 
 # run tests
 gradle test 
