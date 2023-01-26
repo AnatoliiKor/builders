@@ -12,7 +12,7 @@ cd builders
 mvn clean package
 
 # run Admin service
-java -jar output/admin-1.0.0-jar-with-dependencies.jar
+java -jar outputMaven/admin-1.0.0-jar-with-dependencies.jar
 
 # run tests
 mvn test 
